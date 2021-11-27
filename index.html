@@ -19,7 +19,7 @@
     </header>
     <main>
         <button type="button" class="button blue mobile" id="cadastrarCurso">Cadastrar Curso</button>
-        <table class="records">
+        <table id="tableCurso" class="records">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -32,42 +32,6 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>1000</td>
-                    <td>Economia Doméstica</td>
-                    <td>Lorem ipsum dolor sit amet.</td>
-                    <td><img src="https://i.pinimg.com/originals/21/c0/40/21c0403207a38659937fe764d93d20f0.png" width="20%"></td>
-                    <td>Isidro Masseto</td>
-                    <td><a href="https://www.gama.academy/">LINK AULAS</a></td>
-                    <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1001</td>
-                    <td>CDB x Poupança</td>
-                    <td>Lorem ipsum dolor sit amet.</td>
-                    <td> <img src="https://i.pinimg.com/originals/21/c0/40/21c0403207a38659937fe764d93d20f0.png" width="20%"> </td>
-                    <td>Kai Pimenta</td>
-                    <td><a href="https://www.gama.academy/">LINK AULAS</a></td>
-                    <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
-                    </td>
-                </tr>
-                <tr>
-                    <td>1002</td>
-                    <td>Bolsa de Valores</td>
-                    <td>Lorem ipsum dolor sit amet.</td>
-                    <td><img src="https://i.pinimg.com/originals/21/c0/40/21c0403207a38659937fe764d93d20f0.png" width="20%"></td>
-                    <td>Simara Conceição</td>
-                    <td><a href="https://www.gama.academy/">LINK AULAS</a></td>
-                    <td>
-                        <button type="button" class="button green">editar</button>
-                        <button type="button" class="button red">excluir</button>
-                    </td>
-                </tr>
             </tbody>
         </table>
         <div class="modal" id="modal">
@@ -76,18 +40,17 @@
                     <h2>Novo Curso</h2>
                     <span class="modal-close" id="modalClose">&#10006;</span>
                 </header>
-                <form class="modal-form">
-                    <input type="number" class="modal-field" placeholder="ID do Curso">
-                    <input type="text" class="modal-field" placeholder="Título">
-                    <input type="text" class="modal-field" placeholder="Descrição">
-                    <input type="url" class="modal-field" placeholder="Link Imagem">
-                    <input type="text" class="modal-field" placeholder="Professor">
-                    <input type="url" class="modal-field" placeholder="Link Aulas">
-
+                <form id="form" class="modal-form">
+                    <input type="number" id="id" data-index="new" class="modal-field" placeholder="ID do Curso" required>
+                    <input type="text" id="titulo" class="modal-field" placeholder="Título" required>
+                    <input type="text" id="descricao" class="modal-field" placeholder="Descrição" required>
+                    <input type="url" id="imagem" class="modal-field" placeholder="Link Imagem" required>
+                    <input type="text" id="professor" class="modal-field" placeholder="Professor" required>
+                    <input type="url" id="aulas" class="modal-field" placeholder="Link Aulas" required>
                 </form>
                 <footer class="modal-footer">
-                    <button class="button green">Salvar</button>
-                    <button class="button blue" id="cancelar"> Cancelar</button>
+                    <button id="salvar" class="button green">Salvar</button>
+                    <button id="cancelar" class="button blue" id="cancelar"> Cancelar</button>
                 </footer>
             </div>
         </div>
